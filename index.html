@@ -1,82 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <style>
-        img {
-            width: 100px;
-            height: 100PX;
-            border-radius: 50px;
-
-        }
-    </style>
-
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <center> <img position: absolute src="rakesh.jpg" alt="">
-            <h1 style="color:blue"><i>RAKESH G</i></h1>
-            <p style="color:green">9945106431 | https://in.linkedin.com | software Engineer</p>
-        </center>
-
-    </header>
-    <section>
-        <h2 style="color:red"><u>profile summary</u></h2>
-        <span><strong>summary</strong>: Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti earum
-            doloribus, assumenda cumque consequatur asperiores.</span>
-        <hr>
-        <h2 style="color:red"><u>Eduction</u></h2>
-        <ol type="I">
-            <li>ABC Engineering college</li>
-            <ul>
-                <li><strong>2019-2023</strong></li>
-                <li>Information Technology</li>
-                <li>9.2 GPA</li>
-            </ul>
-            <li>XYZ School</li>
-            <ul>
-                <li><strong>2019</strong></li>
-                <li>PCM</li>
-                <li>90%</li>
-            </ul>
-        </ol>
-        <hr>
-
-        <h2 style="color:red"><u>Experience</u></h2>
-        <ul>
-            <li><strong>Software Engineer at ABC tech</strong></li>
-            <ul>
-                <li><strong>July 2023 - present</strong></li>
-                <li>worked on front-end web development using react.js</li>
-            </ul>
-            <li>Intern at XYZ Solution</li>
-            <ul>
-                <li><strong>jan 2022 - may 2022</strong></li>
-                <li>assisted in developing web application</li>
-            </ul>
-        </ul>
-        <hr>
-
-        <h2 style="color:red"><u>Skills</u></h2>
-        <ul>
-            <li><strong>Web Development (HTML,CSS,JavaScript,react) </strong></li>
-            <li>Database Management(MySQL, MongoDB)</li>
-            <li>Version Control(Git, GitHub)</li>
-        </ul>
-        <hr>
-        <h2 style="color:red"><u>Certification</u></h2>
-        <ul>
-            <li><strong>certified Front-End Developer-ABC Academy </strong></li>
-            <li>Database Management Certification - XYZ institute</li>
-        </ul>
-    </section>
-    <footer>
-        <span><strong>Summary: Contact:</strong> riddi.suteri@example.com</span>
-    </footer>
+    <div class="container">
+        <div class="Calculator">
+        <form action="post">
+         <div class="display">
+            <input type="text" name="display">
+         </div>
+         <div>
+            <input type="button" value="7" onclick="display.value += '7'">
+            <input type="button" value="8" onclick="display.value += '8'">
+            <input type="button" value="9" onclick="display.value += '9'">
+            <input type="button" value="DEL" onclick="display.value = display.value.toString().slice(0,-1)" id="blue">
+         </div>
+         <div>
+            <input type="button" value="4" onclick="display.value += '4'">
+            <input type="button" value="5" onclick="display.value += '5'">
+            <input type="button" value="6" onclick="display.value += '6'">
+            <input type="button" value="+" onclick="display.value += '+'">
+         </div>
+         <div>
+            <input type="button" value="1" onclick="display.value += '1'">
+            <input type="button" value="2" onclick="display.value += '2'">
+            <input type="button" value="3" onclick="display.value += '3'">
+            <input type="button" value="-" onclick="display.value += '-'">
+         </div>
+         <div>
+            <input type="button" value="." onclick="display.value += '.'">
+            <input type="button" value="0" onclick="display.value += '0'">
+            <input type="button" value="/" onclick="display.value += '/'">
+            <input type="button" value="*" onclick="display.value += '*'">
+         </div>
+         <div class="footer">
+            <input type="button" value="RESET" onclick="display.value = ''" id="blue">
+            <input type="button" value="=" onclick="display.value = eval( display.value)" class="equal" id="red">
+         </div>
+        </form>
+    </div>
+    </div>
+   
 </body>
-
 </html>
+
